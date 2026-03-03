@@ -1502,6 +1502,14 @@ function submitSurvey(){
     return;
   }
 
+  // MBTI 필수
+  const mbtiVal = document.getElementById('sv-mbti').value.trim();
+  if(!mbtiVal){
+    alert('MBTI를 입력해 주세요.');
+    document.getElementById('sv-mbti').focus();
+    return;
+  }
+
   btn.disabled = true;
   btn.textContent = '제출 중...';
 
